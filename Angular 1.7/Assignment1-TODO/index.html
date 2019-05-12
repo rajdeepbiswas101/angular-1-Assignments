@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.angularjs.org/1.7.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>ToDo List</title>
+</head>
+<body ng-app="Assignment1" ng-controller="TodoListController">
+    <h1>My Todo list</h1>
+    <input type="text" ng-model='Inputs'>
+    <button ng-click='addElement()'>Add</button>
+    <div ng-repeat= 'element in Elements'>
+        <label><input type="checkbox" ng-checked="deleteListOp()" ng-model="element.isSelected">{{element.name}}</label>
+    </div>
+    <button style="display:block" ng-click="removeElement()">Remove marked</button>
+</body>
+</html>
